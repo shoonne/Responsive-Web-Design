@@ -1,0 +1,282 @@
+body{
+    /*font-family:  Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    Amount of space between each line*/
+
+    font: 15px/1.5 Arial, Helvetica, sans-serif; /*Same as the lines above*/
+    color: white;
+    padding: 0; /*Pushes content to the side*/
+    margin: 0;
+    background: #200122;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #6f0000, #200122);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #6f0000, #200122); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+
+}
+
+/* Global */
+.conatiner{
+    width: 80%;
+    margin: auto; /*Movies content to middle*/
+    overflow: hidden;/*If something goes outside of a div, it becomes hidden instead of a scrollbar*/
+}
+header ul{ /* Unordered list in header*/
+    margin: 0;
+    padding: 0;
+}
+
+.button_1{
+    height: 38px;
+    background: #e8491d;
+    border:0;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #ffffff;
+}
+
+.textanimate{
+    width: 100%;
+    height: auto;
+}
+
+.dark{
+    padding: 15px;
+    background: #c90303;
+    color: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Header */
+header{
+    color: #ffffff;
+    padding-top: 30px;
+    min-height: 70px; /*When the screen is smaller, the header adjust*/
+    border-bottom: #e8491d 3px solid; /**/ 
+}
+
+header a{ /*All ahref elements in the header*/
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header li{
+    display: inline; /* List item stays next to each other*/
+    padding: 0 20px 0 20px;
+}
+
+header #branding h1{
+   margin: 0;
+    margin-left: 35px;
+
+}
+
+header nav{ 
+    float: right; /* Moves navigation to the right side of the page*/
+
+}
+
+header .highlight , header .current a{ /*Highlight the span in the header. Changes color on current page*/
+    color: #e8491d;
+    font-weight: bold;
+
+}
+
+header a:hover{ /*When hovering over an a element*/
+    color: #cccccc;
+    font-weight: bold;
+}
+
+
+/* Showcase */
+
+
+#showcase{
+
+    min-height: 400px;
+    padding-top: 10px;
+    text-align: right;
+}
+#showcase img{
+    float: left;
+    margin-top: -1px;
+    padding-left: 14px;
+    border-radius: 25px;
+    width: 300px;
+    height: 300px;
+}
+
+#showcase h1{
+    margin-top: 100px;
+    font-size: 55px;
+    margin-bottom: 10px;
+    margin-right: 100px;
+}
+
+#showcase p{
+    font-size: 20px;
+}
+
+/* News Letter */
+
+#newsletter{
+    margin-top: -20px;
+    padding: 15px;
+    color: #ffffff;
+    background: #000000;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+    
+    
+
+
+
+}
+
+#newsletter form{
+    float:left;
+
+}
+
+#newsletter form{
+    float:right;
+    margin-top: 15px;
+
+}
+
+#newsletter input[type = "email"]{
+    padding: 4px;
+    height: 25px;
+    width: 250px;
+}
+
+
+
+
+/* Boxes */
+
+#boxes{
+    margin-top: 20px;
+    
+}
+
+#boxes .box{
+    float: left;
+    text-align: center;
+    width: 30%;
+    padding: 10px;
+
+
+}
+
+#boxes .box img{
+    width: 90px;
+    border-radius: 5px;
+}
+
+/* Side bar */
+
+aside#sidebar{
+    float: left;
+    width: 40%;
+    
+}
+aside#sidebar .qoute input, aside#sidebar .qoute textarea{
+    width: 90px;
+    padding: 5px;
+}
+
+/* Main-col */
+
+article#main-col{
+    float: left;
+    width: 65%;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    margin-top: 20px;
+    color: #ffffff;
+    background-color: #e8491d;
+    text-align: center;
+}
+
+/*Text animation*/
+#str{ 
+    display: block;
+    float: right;
+    width: 750px;
+    padding: 20px;
+    height: auto;
+    font-family: sans-serif;
+    font-size: 40px;
+    margin: auto;
+    margin-left: 300px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+
+
+
+/* Media Querries*/
+
+@media (max-width:768px){ /*Tablets screen sizes*/
+    header #branding,
+    header nav,
+    header nav li, 
+    #newsletter h1,
+    #newsletter form,
+    #boxes .box,
+    article#main-col,
+    aside#sidebar{ /*Remove the float from header*/
+        float: none;
+        text-align: center;
+        width: 100%;
+
+    }
+    header{
+        padding-bottom: 20px;
+    }
+    #showcase img{ /* Center Image */
+    float: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+   
+    }
+
+    #showcase h1{
+        margin-top: 40px;
+    }
+
+    #newsletter button{
+        display: block;
+        width: 100%;
+    }
+    #newsletter form input[type = "email"]{
+        margin-bottom: 5px;
+
+    }
+
+    #str{
+        font-size: 25px;
+       
+    }
+
+
+
+}
+
+
+
+
