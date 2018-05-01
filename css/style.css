@@ -8,16 +8,17 @@ body{
     color: white;
     padding: 0; /*Pushes content to the side*/
     margin: 0;
-    background: #200122;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #6f0000, #200122);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #6f0000, #200122); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #3a7bd5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #3a6073, #3a7bd5);  /* Chrome 10-25, Safari 5.1-6 */background: linear-gradient(to left, #3a6073, #3a7bd5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     
 
 }
 
 /* Global */
 .conatiner{
-    width: 80%;
+    
+    width: 100%;
     margin: auto; /*Movies content to middle*/
     overflow: hidden;/*If something goes outside of a div, it becomes hidden instead of a scrollbar*/
 }
@@ -42,6 +43,7 @@ header ul{ /* Unordered list in header*/
 
 .dark{
     padding: 15px;
+    padding-left: 3%;
     background: #c90303;
     color: #ffffff;
     margin-top: 10px;
@@ -93,12 +95,12 @@ header a:hover{ /*When hovering over an a element*/
 
 /* Showcase */
 
-
 #showcase{
 
     min-height: 400px;
     padding-top: 10px;
-    text-align: right;
+    text-align: center;
+    
 }
 #showcase img{
     float: left;
@@ -126,16 +128,7 @@ header a:hover{ /*When hovering over an a element*/
     margin-top: -20px;
     padding: 15px;
     color: #ffffff;
-    background: #000000;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to bottom, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to bottom, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
-    
-    
-
-
-
+    background: #e8491d;
 }
 
 #newsletter form{
@@ -195,6 +188,7 @@ aside#sidebar .qoute input, aside#sidebar .qoute textarea{
 
 article#main-col{
     float: left;
+    padding-left: 1%;
     width: 65%;
 }
 
@@ -214,11 +208,11 @@ footer{
 #str{ 
     display: block;
     float: right;
-    width: 750px;
+    width: 650px;
     padding: 20px;
     height: auto;
     font-family: sans-serif;
-    font-size: 40px;
+    font-size: 20px;
     margin: auto;
     margin-left: 300px;
     color: rgb(255, 255, 255);
@@ -241,12 +235,14 @@ footer{
     aside#sidebar{ /*Remove the float from header*/
         float: none;
         text-align: center;
-        width: 100%;
+        width: 95%;
 
     }
     header{
         padding-bottom: 20px;
     }
+    
+
     #showcase img{ /* Center Image */
     float: none;
     display: block;
@@ -268,9 +264,22 @@ footer{
 
     }
 
-    #str{
-        font-size: 25px;
-       
+    #str{ 
+        display: block;
+        
+        width: 350px;
+        padding: 20px;
+        height: auto;
+        font-family: sans-serif;
+        font-size: 20px;
+        margin: auto;
+        margin-left: 300px;
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+    }
+
+    .dark{
+        margin-left: 18px;
     }
 
 
