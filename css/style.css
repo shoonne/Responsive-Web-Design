@@ -4,22 +4,30 @@ body{
     line-height: 1.5;
     Amount of space between each line*/
 
-    font: 15px/1.5 Arial, Helvetica, sans-serif; /*Same as the lines above*/
+    font: 15px/1.5 'Montserrat', sans-serif; /*Same as the lines above*/
     color: white;
     padding: 0; /*Pushes content to the side*/
     margin: 0;
-    background: #3a7bd5;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #3a6073, #3a7bd5);  /* Chrome 10-25, Safari 5.1-6 */background: linear-gradient(to left, #3a6073, #3a7bd5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-    
-
+    background-color: #00acff;
 }
 
+
 /* Global */
+
+#c{
+    margin:auto;
+}
 .conatiner{
     
     width: 100%;
     margin: auto; /*Movies content to middle*/
+    overflow: hidden;/*If something goes outside of a div, it becomes hidden instead of a scrollbar*/
+}
+.conatinerTwo{
+    
+    width: 100%;
+    margin: auto; /*Movies content to middle*/
+    margin-left: 20px;
     overflow: hidden;/*If something goes outside of a div, it becomes hidden instead of a scrollbar*/
 }
 header ul{ /* Unordered list in header*/
@@ -27,14 +35,7 @@ header ul{ /* Unordered list in header*/
     padding: 0;
 }
 
-.button_1{
-    height: 38px;
-    background: #e8491d;
-    border:0;
-    padding-left: 20px;
-    padding-right: 20px;
-    color: #ffffff;
-}
+
 
 .textanimate{
     width: 100%;
@@ -44,7 +45,7 @@ header ul{ /* Unordered list in header*/
 .dark{
     padding: 15px;
     padding-left: 3%;
-    background: #c90303;
+    background: #183acf;
     color: #ffffff;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -55,7 +56,7 @@ header{
     color: #ffffff;
     padding-top: 30px;
     min-height: 70px; /*When the screen is smaller, the header adjust*/
-    border-bottom: #e8491d 3px solid; /**/ 
+    border-bottom: #1d20e8 3px solid; /**/ 
 }
 
 header a{ /*All ahref elements in the header*/
@@ -82,7 +83,7 @@ header nav{
 }
 
 header .highlight , header .current a{ /*Highlight the span in the header. Changes color on current page*/
-    color: #e8491d;
+    color: #ffffff;
     font-weight: bold;
 
 }
@@ -96,19 +97,16 @@ header a:hover{ /*When hovering over an a element*/
 /* Showcase */
 
 #showcase{
-
+    background: url(../img/about.jpg);
+    background-size: 100% 500%;
     min-height: 400px;
     padding-top: 10px;
     text-align: center;
     
 }
 #showcase img{
-    float: left;
-    margin-top: -1px;
-    padding-left: 14px;
-    border-radius: 25px;
-    width: 300px;
-    height: 300px;
+    width: 100%;
+    height: auto;
 }
 
 #showcase h1{
@@ -148,9 +146,6 @@ header a:hover{ /*When hovering over an a element*/
     width: 250px;
 }
 
-
-
-
 /* Boxes */
 
 #boxes{
@@ -163,6 +158,7 @@ header a:hover{ /*When hovering over an a element*/
     text-align: center;
     width: 30%;
     padding: 10px;
+    margin-left: 20px
 
 
 }
@@ -187,9 +183,11 @@ aside#sidebar .qoute input, aside#sidebar .qoute textarea{
 /* Main-col */
 
 article#main-col{
+    
     float: left;
     padding-left: 1%;
     width: 65%;
+    display: block;
 }
 
 footer{
@@ -208,15 +206,74 @@ footer{
 #str{ 
     display: block;
     float: right;
-    width: 650px;
+    width: 64%;
     padding: 20px;
     height: auto;
-    font-family: sans-serif;
-    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
     margin: auto;
     margin-left: 300px;
     color: rgb(255, 255, 255);
     font-weight: bold;
+}
+
+.res{
+    background-image: url("../img/abouttwo.jpg");
+    width: 100%;
+    height: 80%;
+}
+.sthlm{
+    background-image: url(../img/ef.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 400px;
+
+}
+
+.skillstxt{
+display: block;
+text-align: center;
+background-color: #183acf;
+border-width: 1px;
+border-style: solid;
+border-color: white;
+}
+.skillspic{
+    display: block;
+}
+.project {
+    width: 250px;
+    height: 250px;
+    display: inline-block; /* line up the pictures */
+    margin:auto 20%;
+
+}
+
+.project-image {
+    width: 170px;
+    height: 70%;
+    border-radius: 25px;
+   
+    overflow: hidden; /* This hides the parts that is sticking out*/
+    margin-right: 60%;
+    /* Hides content that sticks out*/
+}
+.project-image img { /* Gives the image right aspect-ratio*/
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.1s ease-in; /* hastighet vid inzoom*/
+}
+.project-image img:hover { /* hover animation*/
+    transform: scale(1.2); /* Zooms in*/
+    
+    /* Scaling the projects*/
+}
+
+.desc {
+    padding: 13px;
+    margin-right: 80px;
+    text-align: center;
 }
 
 
@@ -266,8 +323,7 @@ footer{
 
     #str{ 
         display: block;
-        
-        width: 350px;
+        width: 300px;
         padding: 20px;
         height: auto;
         font-family: sans-serif;
@@ -278,9 +334,18 @@ footer{
         font-weight: bold;
     }
 
+    #res{
+
+    }
+
     .dark{
         margin-left: 18px;
     }
+    .skillstxt{
+
+    }
+
+
 
 
 
